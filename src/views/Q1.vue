@@ -1,19 +1,19 @@
 <template>
     <section>
-        <h1>It's the Q1</h1>
-        <h2> username 저장 여부 테스트용</h2><br>
-        <h2> 이름: {{username}}</h2>
-        <br>
-        <h2>가격대</h2><br>
-        <h3>가성비 좋은 와인
-            <input type="radio" v-model="answer" value="1" @change="submit">
+        <h2>1. 어떤 계절과 어울리는 와인을 원하시나요?</h2><br>
+        <h3>살랑거리는 바람에 벚꽃이 흩날리는 봄
+            <input type="radio" v-model="answer" value="spring" @change="submit">
         </h3><br>
-        <h3>특별한 날, 분위기 내기 좋은 와인
-            <input type="radio" v-model="answer" value="2" @change="submit">
+        <h3>무더운 날 칠링하고 싶은 여름
+            <input type="radio" v-model="answer" value="summer" @change="submit">
         </h3><br>
-        <h3>오늘은 내가 일론 머스크
-            <input type="radio" v-model="answer" value="3" @change="submit">
+        <h3>선선한 바람이 불기 시작하는 가을
+            <input type="radio" v-model="answer" value="fall" @change="submit">
         </h3><br>
+        <h3>소복소복 눈이 쌓이는 겨울
+            <input type="radio" v-model="answer" value="winter" @change="submit">
+        </h3><br>
+
         <button>
             <router-link :to="{name: 'Home'}">prev</router-link>
         </button>
@@ -24,20 +24,16 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
 
 export default {
-    computed: mapGetters({
-        username: 'getUsername',
-    }),
     data() {
         return {
-            answer: 0,
+            answer: ""
         }
     },
     methods: {
         submit(){
-            this.$store.commit('setAnswer1', this.answer);
+            localStorage.setItem('answer1',this.answer);
         }
     }
 }

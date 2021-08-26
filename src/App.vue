@@ -16,8 +16,8 @@ export default {
   name: "App",
   data() {
     return {
-      transitionName: ""
-    };
+      transitionName: "",
+    }
   },
   watch: {
     $route(to,from){
