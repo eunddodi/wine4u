@@ -1,7 +1,6 @@
 <template>
     <section>
-        <h1 @timeupdate
-         ="refreshAll">result loading </h1>
+        <h1>result loading </h1>
         <h1 >최종결과: {{finalResult}}</h1>
         <h1>{{username}}</h1>
         <h1>{{answer1}}</h1>
