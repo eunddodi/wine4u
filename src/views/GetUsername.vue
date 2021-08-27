@@ -8,7 +8,6 @@
 </template>
 
 <script>
-// import {mapMutations} from 'vuex'
 export default {
     name: 'GetUsername',
     data(){
@@ -25,31 +24,36 @@ export default {
 </script>
 
 <style scoped>
-
 input:focus {
-    outline: none;
+  outline: none;
 }
-
 .getUsername {
-    background: white;
-    width: 400px;
-    height: 50px;
-    line-height: 50px;
-    border-radius: 5px;
+  width: 400px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 5px;
+  border-color: rgb(33, 33, 33);
+  border-style: double;
+  background: rgba(0, 0, 0, 0);
 }
 .getUsername input {
-    border-style: none;
-    font-size: 0.9rem;
+  font-family: 'BBTreeGB';
+  font-size: 25px;
+  color: rgb(33, 33, 33);
+  text-align: center;
+  background: rgba(0, 0, 0, 0);
+  width: 300px;
+  border-style: none;
 }
 .addContainer {
-    float: right;
-    background: linear-gradient(to right, #6478FB, #8763FB);
-    display: block;
-    width: 3rem;
-    border-radius: 0 5px 5px 0;
+  float: right;
+  display: block;
+  width: 3rem;
+  border-radius: 0 5px 5px 0;
 }
 .addBtn {
-    color: white;
-    vertical-align: middle;
+  color: rgb(33, 33, 33);
+  vertical-align: middle;
+  cursor: pointer;
 }
-    </style>
+</style>
