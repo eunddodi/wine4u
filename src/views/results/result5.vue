@@ -86,12 +86,12 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-
 export default {
-  computed: mapGetters({
-    username: 'getUsername',
-  }),
+  data() {
+    return{
+      username: localStorage.getItem('username')
+    }
+  },
   methods: {
     Nextpage: function(){
       location.href = "./";
