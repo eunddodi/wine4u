@@ -1,25 +1,22 @@
 <template>
-    <div class="getUsername">
-        <input type="text" v-model="username" @keyup.enter="addUsername">
-        <span class="addContainer" @click="addUsername">
-            <i class="fas fa-mouse fa-2x addBtn"></i>
-        </span>
-    </div>
+  <div class="getUsername">
+    <input type="text" v-model="username" @change="addUsername">
+  </div>
 </template>
 
 <script>
 export default {
-    name: 'GetUsername',
-    data(){
-        return {
-            username: ""
-        }
-    },
-    methods: {
-        addUsername(){
-            localStorage.setItem("username", this.username);
-        }
+  name: 'GetUsername',
+  data(){
+    return {
+      username: ""
     }
+  },
+  methods: {
+    addUsername(){
+      localStorage.setItem("username", this.username)
+    }
+  }
 }
 </script>
 
@@ -44,16 +41,5 @@ input:focus {
   background: rgba(0, 0, 0, 0);
   width: 300px;
   border-style: none;
-}
-.addContainer {
-  float: right;
-  display: block;
-  width: 3rem;
-  border-radius: 0 5px 5px 0;
-}
-.addBtn {
-  color: rgb(33, 33, 33);
-  vertical-align: middle;
-  cursor: pointer;
 }
 </style>
