@@ -1,2 +1,2 @@
 # wine4u
-wine4u front-end
+Vue.js를 활용한 와인추천
